@@ -15,7 +15,7 @@ docker build -t test-nginx-app:latest .
 docker run -d -p 8080:80 --name test-nginx-app test-nginx-app:latest
 ```
 
-![Проверка приложения после запуска образа]()
+![Проверка приложения после запуска образа](https://github.com/IvanChet-4/DevOps_D/blob/main/images/app/1.jpg)
 
 3. Подключаемся к DockerHub, тегируем и пушим: <br>
 
