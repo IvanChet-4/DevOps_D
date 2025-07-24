@@ -6,7 +6,7 @@
 [nginx.conf](https://github.com/IvanChet-4/DevOps_D/blob/main/APP%20/nginx.conf) <br>
 [Dockerfile](https://github.com/IvanChet-4/DevOps_D/blob/main/APP%20/Dockerfile) <br>
 
-2.  Клонируем репозиторий, собираем и запускаем образ: <br>
+2.  Клонируем репозиторий, собираем и запускаем образ (запуск для проверки): <br>
 
 ```
 git clone https://github.com/IvanChet-4/DevOps_D.git
