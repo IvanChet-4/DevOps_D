@@ -1,5 +1,5 @@
 # Шаг 1
-## Для настройки и запуска Trraform:
+## Для настройки и запуска Terraform:
 
 Предварительно необходимо внести значения в <b> Project/infrastructure/backend.tf </b> и <b> Project/terraform.tfvars </b> <br>
 
