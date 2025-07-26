@@ -1,12 +1,42 @@
-
 #!/bin/bash
 set -e
 
-docker build -t %dockerhub.repository%:latest .
-docker login -u %dockerhub.username% -p %dockerhub.password%
-docker push %dockerhub.repository%
+# Получить текущий тег
+CURRENT_TAG=$(git describe --tags --abbrev=0)
+echo "Текущий тег: $CURRENT_TAG"
 
-docker build -t %dockerhub.repository%:%tag_name% .
-docker push %dockerhub.repository%:%tag_name%
+# Файл для хранения предыдущего тега
+PREV_TAG_FILE="prev_tag.txt"
 
-kubectl apply -f /home/user7/deploy.yaml
+# Проверка существования файла и чтение предыдущего тега
+if [ -f "$PREV_TAG_FILE" ]; then
+    PREV_TAG=$(cat "$PREV_TAG_FILE")
+    echo "Предыдущий тег: $PREV_TAG"
+else
+    PREV_TAG=""
+fi
+
+# Сравнение тегов
+if [ "$CURRENT_TAG" != "$PREV_TAG" ]; then
+    echo "Теги отличаются. Выполняем билд и пуш с новым тегом."
+
+    # Билд и пуш с новым тегом
+    docker build -t %dockerhub.repository%:latest .
+    docker login -u %dockerhub.username% -p %dockerhub.password%
+    docker push %dockerhub.repository%
+
+    docker build -t %dockerhub.repository%:$CURRENT_TAG .
+    docker push %dockerhub.repository%:$CURRENT_TAG
+
+    # Можно добавить дополнительные действия при изменении тега
+    kubectl apply -f /home/user7/deploy.yaml
+
+else
+    echo "Теги совпадают. Выполняем другой набор команд."
+    docker build -t %dockerhub.repository%:latest .
+    docker login -u %dockerhub.username% -p %dockerhub.password%
+    docker push %dockerhub.repository%
+fi
+
+# Обновляем файл с предыдущим тегом
+echo "$CURRENT_TAG" > "$PREV_TAG_FILE"
