@@ -1,0 +1,49 @@
+#!/bin/bash
+set -e
+
+# Параметры (можно передавать через TeamCity параметры)
+DOCKERHUB_REPO="dockerhub.repository"
+KUBE_NAMESPACE="your-namespace"
+KUBE_DEPLOYMENT="deployment-test"
+
+# Получаем ветку или тег из TeamCity
+branch="%teamcity.build.vcs.branch%"
+
+# Получаем SHA коммита
+commit_sha=$(git rev-parse --short HEAD)
+
+echo "Branch or tag: $branch"
+echo "Commit SHA: $commit_sha"
+
+if [[ "$branch" == refs/tags/* ]]; then
+  # Обработка тега
+  echo "Это тег"
+  tag="${branch#refs/tags/}"
+  echo "Build triggered by tag: $tag"
+
+  echo "Собираем docker образ с тегом из тега"
+  docker build -t "$DOCKERHUB_REPO:$tag" .
+
+  echo "Пушим образ с тегом"
+  docker push "$DOCKERHUB_REPO:$tag"
+
+elif [[ "$branch" == refs/heads/* ]]; then
+  # Обработка ветки
+  branch_name="${branch#refs/heads/}"
+  echo "Это ветка: $branch_name"
+
+  # Можно задать условие для конкретных веток, например:
+  if [[ "$branch_name" == "main" ]]; then
+    echo "Собираем образ для ветки: $branch_name"
+    image_tag="$branch_name-$commit_sha"
+    docker build -t "$DOCKERHUB_REPO:$image_tag" .
+
+    echo "Пушим образ с тегом: $image_tag"
+    docker push "$DOCKERHUB_REPO:$image_tag"
+
+  # Обновляем деплоймент в Kubernetes через apply
+  kubectl apply -f ~/deploy.yaml
+else
+  echo "Ветка $branch_name не предназначена для автоматической сборки."
+fi
+fi
