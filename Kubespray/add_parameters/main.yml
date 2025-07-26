@@ -1,0 +1,165 @@
+... тут пропущена дефолтная часть, сам файл находится в ~/kubespray/roles/kubernetes/client/tasks/ ...
+
+- name: Check if /root/user7/.kube directory exists
+  stat:
+    path: /root/.kube
+  register: kube_dir7
+
+- name: Create /home/user7/.kube directory if it does not exist
+  file:
+    path: /home/user7/.kube
+    state: directory
+    owner: user7
+    group: user7
+    mode: '0755'
+  when: kube_dir7.stat.exists
+  become: yes
+
+- name: Copy kube config to user7 home directory if directory exists
+  become: yes
+  copy:
+    src: /root/.kube/config
+    dest: /home/user7/.kube/config
+    owner: user7
+    group: user7
+    mode: '0644'
+    remote_src: yes
+  when: kube_dir7.stat.exists
+
+- name: Create test-service service file with specific content
+  become: yes
+  copy:
+    dest: /home/user7/deploy.yaml
+    owner: user7
+    group: user7
+    mode: '0644'
+    content: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: test-nginx-app
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: nginx
+        template:
+          metadata:
+            labels:
+              app: nginx
+          spec:
+            nodeSelector:
+              role: app
+            containers:
+            - name: nginx
+              image: 4ivan/test-nginx-app:latest
+              ports:
+              - containerPort: 80
+                hostPort: 80
+  when: kube_dir7.stat.exists
+
+- name: Create values.yaml service file with specific content
+  become: yes
+  copy:
+    dest: /home/user7/values.yaml
+    owner: user7
+    group: user7
+    mode: '0644'
+    content: |
+      server:
+        service:
+          type: NodePort
+          nodePort: 30900
+      alertmanager:
+        service:
+          type: NodePort
+          nodePort: 30903
+      pushgateway:
+        service:
+          type: NodePort
+          nodePort: 30902
+      grafana:
+        service:
+          type: NodePort
+          nodePort: 30901
+        adminPassword: "your_password7"
+      ingress:
+        enabled: false
+  when: kube_dir7.stat.exists
+
+- name: Create teamcity.yaml service file with specific content
+  become: yes
+  copy:
+    dest: /home/user7/teamcity.yaml
+    owner: user7
+    group: user7
+    mode: '0644'
+    content: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: teamcity
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: teamcity
+        template:
+          metadata:
+            labels:
+              app: teamcity
+          spec:
+            nodeSelector:
+              role: teamcity
+            containers:
+            - name: teamcity
+              image: jetbrains/teamcity-server:latest
+              ports:
+              - containerPort: 8111
+              resources:
+                requests:
+                  memory: "2Gi"
+                  cpu: "1000m"
+                  ephemeral-storage: "2Gi"
+                limits:
+                  memory: "3Gi"
+                  cpu: "1500m"
+                  ephemeral-storage: "7Gi"
+      ---
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: teamcity-nodeport
+      spec:
+        type: NodePort
+        selector:
+          app: teamcity
+        ports:
+          - port: 80
+            targetPort: 8111
+            nodePort: 30070
+  when: kube_dir7.stat.exists
+  
+- name: Create script file with specific content
+  become: yes
+  copy:
+    dest: /home/user7/script
+    owner: user7
+    group: user7
+    mode: '0755'
+    content: |
+      #!/bin/bash
+      sudo apt update
+      sudo apt install openjdk-21-jre-headless
+      sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
+      kubectl create namespace namespace-test
+      kubectl create namespace monitoring
+      kubectl label node node1 role=monitoring
+      kubectl label node node2 role=app
+      kubectl label node node3 role=teamcity
+      kubectl apply -f deploy.yaml
+      helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+      helm repo update
+      helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
+      kubectl apply -f teamcity.yaml
+  when: kube_dir7.stat.exists
