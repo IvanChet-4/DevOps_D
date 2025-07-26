@@ -1,0 +1,19 @@
+version: 3
+projects:
+  - name: yc-project
+    dir: Terraform/Project
+    autoplan:
+      enabled: true
+      when_modified:
+        - "*.tf"
+        - "*.tfvars"
+    apply_requirements: [approved]
+workflows:
+  default:
+    plan:
+      steps:
+        - run: terraform init -backend-config="access_key=${TF_VAR_access_key}" -backend-config="secret_key=${TF_VAR_secret_key}"
+        - plan
+    apply:
+      steps:
+        - apply
