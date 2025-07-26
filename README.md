@@ -45,6 +45,8 @@ kubectl create namespace monitoring
 helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
 kubectl apply -f teamcity.yaml
 ```
+После этого шага станут доступны grafana, alertmanager, prometheus, node_exporter, приложение, teamcity
+
 
 ### Шаг 4 Teamcity
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/readme.md)
