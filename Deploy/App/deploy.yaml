@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-nginx-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      nodeSelector:
+        role: app
+      containers:
+      - name: nginx
+        image: 4ivan/test-nginx-app:latest
+        ports:
+        - containerPort: 80
+          hostPort: 80
