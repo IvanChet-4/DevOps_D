@@ -1,9 +1,9 @@
 # Для запуска
 
-Предварительно необходимо внести значения в <b> infrastructure/backend.tf </b> и <b> terraform.tfvars </b> <br>
+Предварительно необходимо внести значения в <b> Project/infrastructure/backend.tf </b> и <b> Project/terraform.tfvars </b> <br>
 
-[terraform.tfvars]() <br>
-[infrastructure/backend.tf]() <br>
+[Project/terraform.tfvars](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/terraform.tvars) <br>
+[Project/infrastructure/backend.tf](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/infrastructure/backend.tf) <br>
 
 ## 1.  Переходим в backend_setup и создаем бакет следующими командами
 
@@ -43,7 +43,7 @@ terraform output -json instances_info > instances_info.json
 
 Пример файла instances_info.json:  <br>
 
-[instances_info.json]()  <br>
+[instances_info.json](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/instances_info.json)  <br>
 
 ```
 Важно! Блокируем учетную запись по умолчанию, в данном случае ubuntu
