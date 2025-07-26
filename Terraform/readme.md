@@ -1,4 +1,5 @@
-# Для запуска
+# Шаг 1
+## Для запуска
 
 Предварительно необходимо внести значения в <b> Project/infrastructure/backend.tf </b> и <b> Project/terraform.tfvars </b> <br>
 
