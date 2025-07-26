@@ -1,1 +1,23 @@
+Установка Teamcity была на предыдущем шаге.
 
+Перед установкой аента:
+
+1. Необходимо изменить Server URL :
+
+```
+Ссылка (с условным IP) настройки
+http://89.169.190.80:30070/admin/admin.html?item=serverConfigGeneral
+
+Сама переменая на изменени (также с условным IP)
+Server URL: 	http://89.169.190.80:30070
+```
+
+2. Установить Java на хосте-агенте
+
+```
+sudo apt update
+sudo apt install openjdk-17-jdk
+
+При установке нескольких вариантов можно переключиться на нужную с помощью команды :
+sudo update-alternatives --config java
+```
