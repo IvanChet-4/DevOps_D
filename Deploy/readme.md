@@ -31,7 +31,7 @@ kubectl create namespace monitoring
 helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
 ```
 
-4. Чтобы grafana была доступна на 80 порту заходим на ноду с лэйблом мониторинга и добавляем правило:
+4. Чтобы grafana была доступна на 80 порту заходим на ноду с лэйблом мониторинга и добавляем правила:
 
 ```
 sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
