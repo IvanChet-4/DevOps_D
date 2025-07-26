@@ -45,7 +45,8 @@ ansible_ssh_private_key_file: ~/.ssh/id_ed25519
 ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
 ```
 
-![Результат выполнения]()
-![Результат выполнения]()
-![Результат выполнения]()
-![Результат выполнения]()
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-1.jpg)
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-2.jpg)
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-3.jpg)
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-4.jpg)
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-5.jpg)
