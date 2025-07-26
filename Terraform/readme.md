@@ -25,11 +25,11 @@ terraform apply -auto-approve
 ```
 <br>
 
-![Результат разворачивания ВМ, сетей]()
+![Результат разворачивания ВМ, сетей](https://github.com/IvanChet-4/DevOps_D/blob/main/images/terraform/1-2.jpg)
 
 <br>
 
-![Сохранение стэйтов в ранее созданом бакете]()
+![Сохранение стэйтов в ранее созданом бакете](https://github.com/IvanChet-4/DevOps_D/blob/main/images/terraform/1-3.jpg)
 
 Для вывода IP адресов в файл используем команду: <br>
 
