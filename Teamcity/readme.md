@@ -32,14 +32,40 @@ sudo apt install openjdk-17-jdk
 sudo update-alternatives --config java
 ```
 
-3. Устанавливаем агента:
+3. Устанавливаем агента и подключаем:
 ![Установка Агента](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-3.jpg)
 ![Терминал Агента](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-4.jpg)
 
 4. Настраиваем проект:
 ![Настройка проекта](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-5.jpg)
 
-5. При изменениях в репозитории проекта на Teamcity появляются сообщения pending, после которых стартует настроенный pipe:
+5. Добавляем Triggers:
+	
+```
++:*
++:refs/tags/*
+```
+6. Настраиваем Agent requarements
+
+```
+teamcity.agent.name 	contains LinuxAgent
+```
+
+7. Настраиваем Build Steps
+
+
+
+8. Добавляем Configuration Parameters
+
+```
+dockerhub.password 	  ******
+dockerhub.repository 	4ivan/test-nginx-app
+dockerhub.username 	  4ivan 	
+tag_name 	            latest 
+```
+
+
+9. При изменениях в репозитории проекта на Teamcity появляются сообщения pending, после которых стартует настроенный pipe:
 ![pending из гита об изменении](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-6.jpg)
 
 ![Выполнение pipe](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-7.jpg)
