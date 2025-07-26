@@ -1,4 +1,4 @@
- # Шаг 2
+# Шаг 2
 ## Для настройки и запуска kubespray:
 
 Сначала разворачиваем по инструкциям:
@@ -47,6 +47,6 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-1.jpg)
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-2.jpg)
-![Результат выполнения]()
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-3.jpg)
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-4.jpg)
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-5.jpg)
