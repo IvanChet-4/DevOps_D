@@ -53,7 +53,7 @@ teamcity.agent.name 	contains LinuxAgent
 
 7. Настраиваем Build Steps
 
-[Parameters Description](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/pipe/pipe)
+[Build Steps/Parameters Description](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/pipe/pipe)
 
 8. Добавляем Configuration Parameters
 
