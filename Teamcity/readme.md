@@ -71,3 +71,6 @@ tag_name 	            latest
 ![Выполнение pipe](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-7.jpg)
 
 ![Отображение в DockerHub](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-8.jpg)
+
+
+[Для удобства работы с приложением вынес его в отдельный репозиторий](https://github.com/IvanChet-4/APP-test/tree/main)
