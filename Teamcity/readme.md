@@ -48,7 +48,7 @@ sudo update-alternatives --config java
 6. Настраиваем Agent requarements
 
 ```
-teamcity.agent.name 	contains LinuxAgent
+|teamcity.agent.name| 	contains LinuxAgent|
 ```
 
 7. Настраиваем Build Steps
