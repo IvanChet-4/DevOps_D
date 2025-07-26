@@ -14,7 +14,7 @@ terraform apply -auto-approve
 ```
 <br>
 
-![Создание бакета с правами]()
+![Создание бакета с правами](https://github.com/IvanChet-4/DevOps_D/blob/main/images/terraform/1-1.jpg)
 
 ## 2.  Переходим в Project/infrastructure и начинаем разворачивать инфраструктуру, стэйты сохраняются в бакете
 
