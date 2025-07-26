@@ -5,7 +5,7 @@
 [Project/terraform.tfvars](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/terraform.tvars) <br>
 [Project/infrastructure/backend.tf](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/infrastructure/backend.tf) <br>
 
-## 1.  Переходим в backend_setup и создаем бакет следующими командами
+## 1.  Переходим в Project/setup_bucket и создаем бакет следующими командами
 
 ```
 terraform init
@@ -16,7 +16,7 @@ terraform apply -auto-approve
 
 ![Создание бакета с правами]()
 
-## 2.  Переходим в infrastructure и начинаем разворачивать инфраструктуру, стэйты сохраняются в бакете
+## 2.  Переходим в Project/infrastructure и начинаем разворачивать инфраструктуру, стэйты сохраняются в бакете
 
 ```
 terraform init
