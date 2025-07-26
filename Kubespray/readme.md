@@ -26,7 +26,7 @@ pip install -r requirements.txt
 cp -rfp inventory/sample inventory/"mycluster"
 ```
 Далее необходимо внести значения в <b> inventory/"mycluster"/hosts.yaml </b> <br>
-[hosts.yaml]() <br>
+[hosts.yaml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/hosts.yaml) <br>
 Указываем внешние ip. <br><br>
 Для подготовки inventory файла (hosts.yaml) можно использовать inventory.py и declare -a IPS <br>
 
@@ -37,7 +37,7 @@ ansible_ssh_private_key_file: ~/.ssh/id_ed25519
 ```
 7. При необходимости добавляем задач в <b> kubespray/roles/kubernetes/client/tasks/main.yaml </b>
 
-[main.yml]()
+[main.yml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/main.yml)
 
 ## 1.  Переходим в ~/kubespray и запускаем
 
