@@ -1,3 +1,14 @@
+variable "access_key" {
+  description = "YC access key"
+  type        = string
+}
+
+variable "secret_key" {
+  description = "YC secret key"
+  type        = string
+  sensitive   = true
+}
+
 variable "zone" {
   type = string
   default = "ru-central1-a"
