@@ -1,0 +1,22 @@
+.terraform/
+
+# Обычно коммитим .terraform.lock.hcl
+# .terraform.lock.hcl
+
+*.tfstate
+*.tfstate.backup
+
+*.tfvars
+*.tfvars.json
+
+*.tfbackup
+
+# Дополнительно
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+.terraformrc
+terraform.rc
