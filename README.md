@@ -7,6 +7,8 @@
 
 Первый шаг подготовительный, поэтому нулевой. Собираем наш собственный Docker образ и размещаем его в Dockerhub, этот образ будет использоваться на следующих шагах.
 
+[Для удобства вынес приложение в отдельный репозиторий](https://github.com/IvanChet-4/APP-test)
+
 ### Шаг 1 Terraform
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/readme.md)
 
@@ -57,3 +59,4 @@ kubectl apply -f teamcity.yaml
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/readme.md)
 
 Настраиваем Atlantis
+т.к. данный сервис работает с webhook-ами, то для постоянного контроля инфраструктуры необходим отдельный сервер. 
