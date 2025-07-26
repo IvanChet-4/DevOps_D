@@ -20,7 +20,7 @@ kubectl get nodes --show-labels
 kubectl apply -f deploy.yaml
 ```
 
-3. Устанавливаем grafana, prometheus, alertmanager, node_exporter:
+3. Устанавливаем grafana, prometheus, alertmanager, node_exporter (первичный пароль к web интерфейсу grafana задается в манифесте на предыдущем шаге):
 
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
