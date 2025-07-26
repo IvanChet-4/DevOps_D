@@ -49,6 +49,6 @@ terraform output -json instances_info > instances_info.json
 Важно! Блокируем учетную запись по умолчанию, в данном случае ubuntu
 Для этого добавляем параметры в infrastructure/main.tf
 ```
-[infrastructure/main.tf]()   <br>
+[Project/infrastructure/main.tf](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/infrastructure/main.tf)   <br>
 
-![Результат выполнения]()
+![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/terraform/1-5.jpg)
