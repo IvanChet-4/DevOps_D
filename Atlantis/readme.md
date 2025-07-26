@@ -1,5 +1,7 @@
 # Шаг 5
 
+Настройка atlantis:
+
 1. Размещаем в репозитории манифест с конфигурацией:
 
 [Конфигурация atlantis в репозитории](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/atlantis.yaml)
