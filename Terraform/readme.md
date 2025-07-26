@@ -39,7 +39,7 @@ terraform output -json instances_info > instances_info.json
 
 <br>
 
-![Вывод IP адресов для дальнейшей настройки](https://github.com/IvanChet-4/DevOps_D/blob/main/images/terraform/1-3.jpg)
+![Вывод IP адресов для дальнейшей настройки](https://github.com/IvanChet-4/DevOps_D/blob/main/images/terraform/1-4.jpg)
 
 Пример файла instances_info.json:  <br>
 
