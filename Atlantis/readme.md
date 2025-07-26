@@ -4,7 +4,7 @@
 
 [Конфигурация atlantis в репозитории](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/atlantis.yaml)
 
-2. Настраиваем все секретные переменные, переносим их описание в variables.tf
+2. Настраиваем все секретные переменные, переносим их описание в variables.tf (например для backend)
 
 3. Настраиваем webhook на стороне github
 
