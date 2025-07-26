@@ -34,6 +34,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 4. Чтобы grafana была доступна на 80 порту заходим на ноду с лэйблом мониторинга и добавляем правило:
 
 ```
+sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
 ```
 
