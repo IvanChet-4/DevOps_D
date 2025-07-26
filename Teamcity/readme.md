@@ -69,3 +69,5 @@ tag_name 	            latest
 ![pending из гита об изменении](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-6.jpg)
 
 ![Выполнение pipe](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-7.jpg)
+
+![Отображение в DockerHub](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-8.jpg)
