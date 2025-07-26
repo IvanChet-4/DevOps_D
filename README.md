@@ -26,6 +26,7 @@ terraform apply -auto-approve
 ```
 ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
 ```
+Добавил в настройи kubespray возможность генерировать манифесты и скрипты на управляющей ноде.
 
 ### Шаг 3 Deploy
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Deploy/readme.md)
