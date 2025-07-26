@@ -25,7 +25,7 @@ resource "yandex_vpc_subnet" "subnet3" {
 
 locals {
   instance_memory = [4, 2, 4]
-  boot_disk_sizes  = [20, 10, 20]
+  boot_disk_sizes  = [25, 10, 20]
 }
 
 resource "yandex_compute_instance" "public_instance" {
