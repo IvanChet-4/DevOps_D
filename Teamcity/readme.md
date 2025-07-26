@@ -74,3 +74,5 @@ tag_name 	            latest
 
 
 [Для удобства работы с приложением вынес его в отдельный репозиторий](https://github.com/IvanChet-4/APP-test/tree/main)
+
+![Подключение второго отдельного проекта](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-9.jpg)
