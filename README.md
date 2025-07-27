@@ -88,6 +88,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 ```
 После этого шага станут доступны grafana, alertmanager, prometheus, node_exporter, наше приложение, teamcity
 
+![APP](https://github.com/IvanChet-4/DevOps_D/blob/main/images/app/1-2.jpg)
 
 ### Шаг 4 Teamcity
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/readme.md)
