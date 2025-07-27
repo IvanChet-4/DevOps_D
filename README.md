@@ -51,7 +51,6 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
       sudo apt update
       sudo apt install openjdk-21-jdk
       # Открываем порты для grafana и teamcity agent
-      sudo iptables -I INPUT -p tcp --dport 30070 -j ACCEPT
       sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
       sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
       #Создаем namespaces
@@ -86,9 +85,10 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
       sudo usermod -aG docker user7
       sudo newgrp docker
 ```
-После этого шага станут доступны grafana, alertmanager, prometheus, node_exporter, наше приложение, teamcity
+После этого шага станут доступны grafana (80), alertmanager, prometheus, node_exporter, наше приложение, teamcity
 
 ![APP](https://github.com/IvanChet-4/DevOps_D/blob/main/images/app/1-2.jpg)
+![Grafana на 80 порту](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-5.jpg)
 
 ### Шаг 4 Teamcity
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/readme.md)
