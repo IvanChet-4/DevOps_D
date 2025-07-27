@@ -1,6 +1,7 @@
 variable "YC_ACCESS_KEY" {
   description = "YC access key"
   type        = string
+  sensitive = true
 }
 
 variable "YC_SECRET_KEY"  {
@@ -27,20 +28,24 @@ variable "zone3" {
 variable "folder_id" {
   type = string
   default = ""
+  sensitive = true
 }
 
 variable "cloud_id" {
   type = string
   default = ""
+  sensitive = true
 }
 
 variable "yandex_token" {
   type = string
   default = ""
+  sensitive = true
 }
 
 variable "ssh_public_key" {
   default = "~/.ssh/id_ed25519.pub"
+  sensitive = true
 }
 
 variable "ssh_user" {
