@@ -21,11 +21,11 @@ sensitive = true
 
 ### Настройки со стороны отдельного сервера с внешним адресом, на котором будет работать atlantis
 
-1. Создаем файл с переменными окружения, которые будут использоваться сервисом atlantis
+1. Создаем файл <b>atlantis.env</b> с переменными окружения, которые будут использоваться сервисом atlantis
 
 [atlantis.env](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/atlantis.env)
   
-2. Создаем юнит для сервиса
+2. Создаем юнит для сервиса <b> atlantis.service </b>
 
 [atlantis.service](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/atlantis.service)
 
@@ -35,10 +35,13 @@ sensitive = true
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_ed25519
 ```
 
-4. Скачиваем и разворачиваем Terraform
+4. Скачиваем и разворачиваем Terraform и Atlantis, действия аналогичные  (бинарник терраформ перекинул со своего хоста через scp)
 
 ```
-
+wget https://github.com/runatlantis/atlantis/releases/download/v0.35.0/atlantis_linux_amd64.zip
+unzip atlantis_linux_amd64.zip
+chmod +x atlantis
+sudo mv atlantis /usr/local/bin/
 ```
 
 5. Настраиваем или создаем файл .terraformrc
