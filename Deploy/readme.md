@@ -35,7 +35,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 
 ```
 sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30080
 ```
 
 5. Разворачиваем teamcity:
