@@ -1,10 +1,9 @@
-variable "AWS_ACCESS_KEY_ID" {
-  description = "YC access key"
+YC_ACCESS_KEY  {
+  description = "YC access key 1"
   type        = string
 }
-
-variable "AWS_SECRET_ACCESS_KEY " {
-  description = "YC secret key"
+YC_SECRET_KEY {
+  description = "YC secret key 1"
   type        = string
   sensitive   = true
 }
