@@ -81,8 +81,8 @@
       grafana:
         service:
           type: NodePort
-          nodePort: 30901
-        adminPassword: "your_password7"
+          nodePort: 30080
+        adminPassword: "password"
       ingress:
         enabled: false
   when: kube_dir7.stat.exists
@@ -153,9 +153,8 @@
       sudo apt update
       sudo apt install openjdk-21-jdk
       # Открываем порты для grafana и teamcity agent
-      sudo iptables -I INPUT -p tcp --dport 30070 -j ACCEPT
       sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-      sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
+      sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30080
       #Создаем namespaces
       kubectl create namespace namespace-test
       kubectl create namespace monitoring
