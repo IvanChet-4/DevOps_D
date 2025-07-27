@@ -6,8 +6,6 @@ terraform {
     }
     bucket ="private-bucket-state"
     key        = "1.tfstate"
-    access_key = "YC..."
-    secret_key = "YC..."
     region     = "us-east-1"
     skip_region_validation      = true
     skip_credentials_validation = true
@@ -16,5 +14,5 @@ terraform {
   }
 }
 
-variable access_key = {}
-variable secret_key = {}
+variable access_key{}
+variable secret_key{}
