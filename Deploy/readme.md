@@ -29,6 +29,9 @@ helm repo update
 kubectl create namespace monitoring
 
 helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
+
+если нужно поменять конфигурацию портов в values.yaml: 
+helm upgrade prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
 ```
 
 4. Чтобы grafana была доступна на 80 порту заходим на ноду с лэйблом мониторинга и добавляем правила:
