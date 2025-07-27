@@ -57,7 +57,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
       helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
       kubectl apply -f teamcity.yaml
 ```
-После этого шага станут доступны grafana, alertmanager, prometheus, node_exporter, приложение, teamcity
+После этого шага станут доступны grafana, alertmanager, prometheus, node_exporter, наше приложение, teamcity
 
 
 ### Шаг 4 Teamcity
