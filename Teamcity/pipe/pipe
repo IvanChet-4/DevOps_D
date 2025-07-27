@@ -1,11 +1,14 @@
 #!/bin/bash
 set -e
 
-# Получить текущий тег
+git fetch --tags
+
+echo "Список локальных тегов после fetch:"
+git tag
+
 CURRENT_TAG=$(git describe --tags --abbrev=0)
 echo "Текущий тег: $CURRENT_TAG"
 
-# Файл для хранения предыдущего тега
 PREV_TAG_FILE="prev_tag.txt"
 
 # Проверка существования файла и чтение предыдущего тега
@@ -21,11 +24,8 @@ if [ "$CURRENT_TAG" != "$PREV_TAG" ]; then
     echo "Теги отличаются. Выполняем билд и пуш с новым тегом."
 
     # Билд и пуш с новым тегом
-    docker build -t %dockerhub.repository%:latest .
-    docker login -u %dockerhub.username% -p %dockerhub.password%
-    docker push %dockerhub.repository%
-
     docker build -t %dockerhub.repository%:$CURRENT_TAG .
+    docker login -u %dockerhub.username% -p %dockerhub.password%
     docker push %dockerhub.repository%:$CURRENT_TAG
 
     # Можно добавить дополнительные действия при изменении тега
