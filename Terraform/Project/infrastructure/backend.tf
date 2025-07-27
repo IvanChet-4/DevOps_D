@@ -13,6 +13,3 @@ terraform {
     skip_s3_checksum            = true
   }
 }
-
-variable access_key{}
-variable secret_key{}
