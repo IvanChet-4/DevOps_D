@@ -36,16 +36,21 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 Устанавливаем в кластер приложения по манифестам, добавленным на предыдущем шаге.
 
 ```
-#!/bin/bash
-kubectl label node node1 role=monitoring
-kubectl label node node2 role=app
-kubectl label node node3 role=teamcity
-kubectl apply -f deploy.yaml
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
-kubectl create namespace monitoring
-helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
-kubectl apply -f teamcity.yaml
+      #!/bin/bash
+      sudo apt update
+      sudo apt install openjdk-21-jre-headless
+      sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+      sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
+      kubectl create namespace namespace-test
+      kubectl create namespace monitoring
+      kubectl label node node1 role=monitoring
+      kubectl label node node2 role=app
+      kubectl label node node3 role=teamcity
+      kubectl apply -f deploy.yaml
+      helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+      helm repo update
+      helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
+      kubectl apply -f teamcity.yaml
 ```
 После этого шага станут доступны grafana, alertmanager, prometheus, node_exporter, приложение, teamcity
 
