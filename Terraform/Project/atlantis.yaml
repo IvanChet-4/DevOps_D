@@ -12,7 +12,7 @@ workflows:
   default:
     plan:
       steps:
-        - run: terraform init -backend-config="access_key=${TF_VAR_access_key}" -backend-config="secret_key=${TF_VAR_secret_key}"
+        - run: terraform init -backend-config="access_key=${AWS_ACCESS_KEY_ID}" -backend-config="secret_key=${AWS_SECRET_ACCESS_KEY}"
         - plan
     apply:
       steps:
