@@ -1,13 +1,24 @@
 version: 3
+
 projects:
-  - name: yc-project
-    dir: Terraform/Project
+  - name: bucket
+    dir: Terraform/Project/setup_bucket
     autoplan:
       enabled: true
       when_modified:
         - "*.tf"
         - "*.tfvars"
     apply_requirements: [approved]
+
+  - name: yc-project
+    dir: Terraform/Project/infrastructure
+    autoplan:
+      enabled: true
+      when_modified:
+        - "*.tf"
+        - "*.tfvars"
+    apply_requirements: [approved]
+
 workflows:
   default:
     plan:
