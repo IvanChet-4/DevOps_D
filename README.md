@@ -97,7 +97,9 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/readme.md)
 
 Настраиваем Atlantis
-т.к. данный сервис работает с webhook-ами, то для постоянного контроля инфраструктуры необходим отдельный сервер. 
+т.к. данный сервис работает с webhook-ами, то для постоянного контроля инфраструктуры необходим отдельный сервер. <br>
+
+Результат: <br>
 
 ![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
 ![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
