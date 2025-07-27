@@ -23,10 +23,11 @@ workflows:
   default:
     plan:
       steps:
+        - run: rm -rf .terraform
         - init:
             extra_args:
-              - "-backend-config=access_key=${AWS_ACCESS_KEY_ID}"
-              - "-backend-config=secret_key=${AWS_SECRET_ACCESS_KEY}"
+              - "-backend-config=access_key=${YC_ACCESS_KEY}"
+              - "-backend-config=secret_key=${YC_SECRET_KEY}"
                - "-upgrade"
         - plan
     apply:
