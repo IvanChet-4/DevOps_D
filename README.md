@@ -31,7 +31,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
 ```
-В рамках настройки добавил в настройи kubespray возможность генерировать манифесты и скрипты на управляющей ноде.
+В рамках настройки kubespray добавил возможность генерировать манифесты и скрипты на управляющей ноде.
+<b> kubespray/roles/kubernetes/client/tasks/main.yaml </b>
+[main.yml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/main.yml)
 
 ### Шаг 3 Deploy
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Deploy/readme.md)
