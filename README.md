@@ -40,6 +40,8 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 После работы kubespray, файл <b> ~/.kube/config </b> находиться в домашней директории у настроенного пользователя. <br>
 Команда <b> kubectl get pods --all-namespaces </b> отрабатывает без ошибок.
 
+![kube/config и вывод команды](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-9.jpg)
+
 ### Шаг 3 Deploy
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Deploy/readme.md)
 
