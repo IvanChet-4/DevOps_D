@@ -2,7 +2,7 @@
 ## Для настройки atlantis необходимо:
 
 
-### Настройка со стороны GitHub:
+### Настройки со стороны GitHub:
 
 1. Размещаем в репозитории манифест с конфигурацией:
 
@@ -19,18 +19,20 @@ sensitive = true
 ![Настройка webhook](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-1.jpg)
 
 
-### Настройка со стороны отдельного сервера с atlantis
+### Настройки со стороны отдельного сервера с внешним адресом, на котором будет работать atlantis
+
+1. Создаем файл с переменными окружения, которые будут использоваться в конфигурации проекта atlantis.env
+  
+2. Создаем юнит для сервиса
 
 
-
-4. Добавляем секретные переменные через export TF_VAR_ в систему с установленным atlantis и запускаем его :
-
+Запускаем проверяем:
 ```
-atlantis server \
-  --gh-user = "IvanChet-4" \
-  --gh-token = "" \
-  --repo-allowlist = "github.com/IvanChet-4/DevOps_D" \
-  --port=4141
+sudo systemctl daemon-reload
+sudo systemctl start atlantis
+sudo systemctl enable atlantis
+
+sudo systemctl status atlantis
 ```
 
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-2.jpg)
