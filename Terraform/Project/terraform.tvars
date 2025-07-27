@@ -1,5 +1,5 @@
 variable "yandex_token" {}
 variable "cloud_id" {}
 variable "folder_id" {}
-variable "AWS_ACCESS_KEY_ID" {}
-variable "AWS_SECRET_ACCESS_KEY" {}
+variable "YC_ACCESS_KEY" {}
+variable "YC_SECRET_KEY" {}
