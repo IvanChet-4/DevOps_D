@@ -11,14 +11,17 @@ variable "zone" {
 variable "folder_id" {
   type = string
   default = ""
+  sensitive = true
 }
 
 variable "cloud_id" {
   type = string
   default = ""
+  sensitive = true
 }
 
 variable "yandex_token" {
   type = string
   default = ""
+  sensitive = true
 }
