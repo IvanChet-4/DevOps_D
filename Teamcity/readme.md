@@ -37,10 +37,21 @@ sudo update-alternatives --config java
 ![Установка Агента](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-3.jpg)
 ![Терминал Агента](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-4.jpg)
 
-4. Настраиваем проект:
+```
+Лучше устанавливать агента с эндпоинта /installFullAgent.html
+Cкачиваем buildAgentFull.zip с помощью wget нужную версию
+Распаковываем в заранее подготовленную директорию 
+Переходим в cd conf/
+Копируем шаблон конфига cp buildAgent.dist.properties buildAgent.properties 
+Меняем значение основных переменных nano buildAgent.properties 
+Переходим в директорию cd bin/
+И запускаем командой ./agent.sh start
+```
+
+5. Настраиваем проект:
 ![Настройка проекта](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-5.jpg)
 
-5. Добавляем Branch specification:
+6. Добавляем Branch specification:
 	
 ```
 refs/heads/*
