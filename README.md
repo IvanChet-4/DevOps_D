@@ -41,7 +41,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 ### Шаг 3 Deploy
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Deploy/readme.md)
 
-Устанавливаем в кластер приложения по манифестам, добавленным на предыдущем шаге.
+Устанавливаем в кластер приложения по манифестам и скриптам, добавленным на предыдущем шаге.
 
 ```
       #!/bin/bash
