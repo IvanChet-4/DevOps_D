@@ -73,6 +73,16 @@ sudo systemctl status atlantis
 
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-5.jpg)
 
+```
+git clone https://github.com/IvanChet-4/DevOps_D.git
+cd DevOps_D/Terraform/Project/infrastructure/
+nano main.tf
+git checkout -b my-new-branch-2
+git add .
+git commit -m "Изменение параметров в infrastructure-2"
+git pull origin my-new-branch-2
+```
+
 <br>
 Оформляем Pull request и смотрим результат: <br>
 <br>
