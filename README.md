@@ -91,6 +91,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 ![Grafana на 80 порту](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-5.jpg)
 ![Alertmanager](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-6.jpg)
 ![node_exporter](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-7.jpg)
+![node_exporter](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-8.jpg)
 
 ### Шаг 4 Teamcity
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/readme.md)
