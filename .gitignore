@@ -1,0 +1,46 @@
+# Atlantis
+.atlantis.yaml
+.atlantis/             # если используется директория для состояния Atlantis
+atlantis.log           # лог-файлы Atlantis
+
+# Kubespray
+inventory/mycluster/  # если в inventory лежат приватные настройки (можно исключить конкретные файлы)
+inventory/mycluster/group_vars/all/vault.yml
+inventory/mycluster/group_vars/k8s_cluster/k8s_vault.yml
+vault.yml             # если используется Ansible Vault
+*.retry               # файлы повторных запусков Ansible
+
+# Ansible
+*.retry               # файлы повторных попыток
+*.vault                # файлы с зашифрованными секретами (если есть)
+vault.yml             # файлы с секретами
+group_vars/*/vault.yml
+host_vars/*/vault.yml
+secrets.yml           # любые файлы с секретами
+*.pem                 # приватные ключи
+*.key                 # приватные ключи
+*.crt                 # сертификаты, если не публичные
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
+terraform.tfvars.json
+secret.auto.tfvars
+secret.auto.tfvars.json
+.terraformrc
+terraform.rc
+
+# Общие
+*.log
+*.bak
+*.swp
+*.tmp
+.DS_Store
