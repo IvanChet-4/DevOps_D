@@ -48,6 +48,14 @@ sudo mv atlantis /usr/local/bin/
 
 [.terraformrc](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/.terraformrc)
 
+6. Открываем порт 4141 для приема webhook от github
+
+```
+sudo iptables -A INPUT -p tcp --dport 4141 -j ACCEPT
+```
+
+
+
 
 Запускаем проверяем:
 ```
