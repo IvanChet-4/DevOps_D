@@ -29,6 +29,22 @@ sensitive = true
 
 [atlantis.service](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/atlantis.service)
 
+3. Создаем сертификаты или генерируем для переменной TF_VAR_ssh_public_key
+
+```
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_ed25519
+```
+
+4. Скачиваем и разворачиваем Terraform
+
+```
+
+```
+
+5. Настраиваем или создаем файл .terraformrc
+
+[.terraformrc](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/.terraformrc)
+
 
 Запускаем проверяем:
 ```
