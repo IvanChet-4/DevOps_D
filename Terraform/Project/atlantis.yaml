@@ -28,7 +28,7 @@ workflows:
             extra_args:
               - "-backend-config=access_key=${YC_ACCESS_KEY}"
               - "-backend-config=secret_key=${YC_SECRET_KEY}"
-               - "-upgrade"
+              - "-upgrade"
         - plan
     apply:
       steps:
