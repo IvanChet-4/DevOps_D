@@ -1,11 +1,14 @@
 # Шаг 5
 ## Для настройки atlantis необходимо:
 
+
+### Настройка со стороны GitHub:
+
 1. Размещаем в репозитории манифест с конфигурацией:
 
 [Конфигурация atlantis в репозитории](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/atlantis.yaml)
 
-2. Настраиваем все секретные переменные
+2. Настраиваем все секретные переменные в файлах variables.tf
 
 ```
 sensitive = true
@@ -15,6 +18,8 @@ sensitive = true
 
 ![Настройка webhook](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-1.jpg)
 
+
+### Настройка со стороны отдельного сервера с atlantis
 
 
 
