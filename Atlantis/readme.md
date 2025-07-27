@@ -4,7 +4,7 @@
 
 ### Настройки со стороны GitHub:
 
-1. Размещаем в репозитории манифест с конфигурацией:
+1. Размещаем в репозитории манифест с конфигурацией <b> atlantis.yaml </b>:
 
 [Конфигурация atlantis в репозитории](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/atlantis.yaml)
 
@@ -21,7 +21,7 @@ sensitive = true
 
 ### Настройки со стороны отдельного сервера с внешним адресом, на котором будет работать atlantis
 
-1. Создаем файл <b>atlantis.env</b> с переменными окружения, которые будут использоваться сервисом atlantis
+1. Создаем файл <b> atlantis.env </b> с переменными окружения, которые будут использоваться сервисом atlantis
 
 [atlantis.env](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/atlantis.env)
   
@@ -54,10 +54,8 @@ sudo mv atlantis /usr/local/bin/
 sudo iptables -A INPUT -p tcp --dport 4141 -j ACCEPT
 ```
 
+7. Запускаем и проверяем:
 
-
-
-Запускаем проверяем:
 ```
 sudo systemctl daemon-reload
 sudo systemctl start atlantis
@@ -67,3 +65,12 @@ sudo systemctl status atlantis
 ```
 
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-2.jpg)
+ <br>
+Делаем тестовый push: <br>
+
+![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-5.jpg)
+ <br>
+Смотрим результат: <br>
+
+![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
+![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
