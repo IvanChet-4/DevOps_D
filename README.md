@@ -45,20 +45,29 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 
 ```
       #!/bin/bash
+      # Устанавливаем jdk для агента teamcity 
       sudo apt update
-      sudo apt install openjdk-21-jre-headless
+      sudo apt install openjdk-21-jdk
+      # Открываем порты для grafana и teamcity agent
+      sudo iptables -I INPUT -p tcp --dport 8111 -j ACCEPT
       sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
       sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
+      #Создаем namespaces
       kubectl create namespace namespace-test
       kubectl create namespace monitoring
+      #Распределяем роли
       kubectl label node node1 role=monitoring
       kubectl label node node2 role=app
       kubectl label node node3 role=teamcity
+      #Запускаем приложение
       kubectl apply -f deploy.yaml
+      # Запускаем grafana, alertmanager, prometheus, node_exporter
       helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
       helm repo update
       helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
+      #Запускаем teamcity
       kubectl apply -f teamcity.yaml
+      # Устанавливаем docker для агента teamcity, выдаем правадля пользователю
       # Add Docker's official GPG key:
       sudo apt-get update
       sudo apt-get install ca-certificates curl
