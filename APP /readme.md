@@ -29,3 +29,5 @@ docker push 4ivan/test-nginx-app:latest
 4. Результат в DockerHub:  <br>
 
 <https://hub.docker.com/repository/docker/4ivan/test-nginx-app/general>
+
+![Проверка приложения после запуска образа](https://github.com/IvanChet-4/DevOps_D/blob/main/images/app/1-2.jpg)
