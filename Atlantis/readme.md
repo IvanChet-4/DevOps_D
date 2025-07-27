@@ -68,11 +68,13 @@ sudo systemctl status atlantis
 
 <br>
 Делаем тестовый push: <br>
+<br>
 
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-5.jpg)
 
 <br>
 Оформляем Pull request и смотрим результат: <br>
-
+<br>
+ 
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
