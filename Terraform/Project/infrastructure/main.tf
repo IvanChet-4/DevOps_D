@@ -24,8 +24,8 @@ resource "yandex_vpc_subnet" "subnet3" {
 }
 
 locals {
-  instance_memory = [4, 2, 4]
-  boot_disk_sizes  = [25, 10, 20]
+  instance_memory = [2, 2, 2]
+  boot_disk_sizes  = [10, 10, 10]
 }
 
 resource "yandex_compute_instance" "public_instance" {
@@ -34,7 +34,7 @@ resource "yandex_compute_instance" "public_instance" {
   zone = element([var.zone, var.zone, var.zone2], count.index)
 
   resources {
-    cores = contains([0, 2], count.index) ? 4 : 2
+    cores = 2
     core_fraction = 20
     memory = local.instance_memory[count.index]
   }
