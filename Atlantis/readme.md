@@ -21,9 +21,13 @@ sensitive = true
 
 ### Настройки со стороны отдельного сервера с внешним адресом, на котором будет работать atlantis
 
-1. Создаем файл с переменными окружения, которые будут использоваться в конфигурации проекта atlantis.env
+1. Создаем файл с переменными окружения, которые будут использоваться сервисом atlantis
+
+[atlantis.env](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/atlantis.env)
   
 2. Создаем юнит для сервиса
+
+[atlantis.service](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/conf/atlantis.service)
 
 
 Запускаем проверяем:
