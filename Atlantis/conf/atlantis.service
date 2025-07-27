@@ -1,0 +1,18 @@
+[Unit]
+Description=Atlantis server
+After=network.target
+
+[Service]
+EnvironmentFile=/home/user7/atlantis/atlantis.env
+
+ExecStart=/usr/local/bin/atlantis server \
+  --repo-allowlist="github.com/IvanChet-4/DevOps_D" \
+  --gh-user="IvanChet-4" \
+  --gh-token="тут токен" \
+  --gh-webhook-secret="my-webhook-secret" \
+  --atlantis-url="http://62.84.127.152:4141" \
+  --data-dir="/var/lib/atlantis"
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
