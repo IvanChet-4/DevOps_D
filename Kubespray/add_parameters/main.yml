@@ -151,6 +151,7 @@
       #!/bin/bash
       sudo apt update
       sudo apt install openjdk-21-jre-headless
+      sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
       sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
       kubectl create namespace namespace-test
       kubectl create namespace monitoring
