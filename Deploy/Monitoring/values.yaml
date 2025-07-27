@@ -13,7 +13,7 @@ pushgateway:
 grafana:
   service:
     type: NodePort
-    nodePort: 30901
+    nodePort: 30080
   adminPassword: "password"
 ingress:
   enabled: false
