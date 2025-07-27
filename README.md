@@ -97,6 +97,8 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 Устанавливаем и настраиваем агента для Teamcity.
 
 ![Teamcity](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-10.jpg)
+![Alertmanager](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-6.jpg)
+![node_exporter](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-7.jpg)
 
 ### Шаг 5 Atlantis
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/readme.md)
