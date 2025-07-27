@@ -3,5 +3,5 @@ variable "cloud_id" {}
 variable "folder_id" {}
 variable "access_key" {}
 variable "secret_key" {}
-AWS_ACCESS_KEY_ID {}
-AWS_SECRET_ACCESS_KEY {}
+YC_ACCESS_KEY {}
+YC_SECRET_KEY {}
