@@ -47,6 +47,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-1.jpg)
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-2.jpg)
+Сначала я разворачивал grafana без helm, но это дольше. Скриншот ниже с тех времен, когда kubespray создавал yaml файл графаны и не только. Просто по заданию нужно показать конфиг kube у пользователя, скриншот ниже об этом.
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-3.jpg)
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-4.jpg)
 ![Результат выполнения](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-5.jpg)
