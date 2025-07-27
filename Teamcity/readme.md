@@ -40,11 +40,11 @@ sudo update-alternatives --config java
 4. Настраиваем проект:
 ![Настройка проекта](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-5.jpg)
 
-5. Добавляем Triggers:
+5. Добавляем Branch specification:
 	
 ```
-+:*
-+:refs/tags/*
+refs/heads/*
+refs/tags/*
 ```
 6. Настраиваем Agent requarements
 
