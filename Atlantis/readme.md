@@ -13,6 +13,7 @@
 ```
 sensitive = true
 ```
+"И не забываем про <b> gitignore </b> - это должно быть по default" )
 
 3. Настраиваем webhook на стороне github
 
