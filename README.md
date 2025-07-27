@@ -52,7 +52,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
       sudo apt install openjdk-21-jdk
       # Открываем порты для grafana и teamcity agent
       sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-      sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30901
+      sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 30080
       #Создаем namespaces
       kubectl create namespace namespace-test
       kubectl create namespace monitoring
