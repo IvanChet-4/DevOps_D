@@ -26,6 +26,9 @@ terraform apply -auto-approve
 Настраиваем kubespray и запускаем:
 
 ```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
 ```
 Добавил в настройи kubespray возможность генерировать манифесты и скрипты на управляющей ноде.
