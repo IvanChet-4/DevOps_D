@@ -7,7 +7,9 @@
 
 Первый шаг подготовительный, поэтому нулевой. Собираем наш собственный Docker образ и размещаем его в Dockerhub, этот образ будет использоваться на следующих шагах.
 
-[Для удобства вынес приложение в отдельный репозиторий](https://github.com/IvanChet-4/APP-test)
+[Для удобства вынес приложение в отдельный репозиторий](https://github.com/IvanChet-4/APP-test) <br>
+
+[Ссылка на DockerHub](https://hub.docker.com/repository/docker/4ivan/test-nginx-app/general) <br>
 
 ### Шаг 1 Terraform
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/readme.md)
