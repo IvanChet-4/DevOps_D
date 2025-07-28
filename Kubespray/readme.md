@@ -1,5 +1,5 @@
 # Шаг 3
-## Для настройки и запуска kubespray:
+## Установка kubespray:
 
 Сначала разворачиваем по инструкциям:
 1. Ставим пакеты:
@@ -20,7 +20,7 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-## Настройки перед запуском:
+## 1. Настройки перед запуском:
 
 5. Копируем шаблон:
 ```
@@ -39,7 +39,7 @@ ansible_ssh_private_key_file: ~/.ssh/id_ed25519
 
 [main.yml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/main.yml)
 
-## 1.  Переходим в ~/kubespray и запускаем
+## 2.  Переходим в ~/kubespray и запускаем
 
 ```
 ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
