@@ -1,14 +1,15 @@
 # Шаг 1
 ## Для настройки и запуска Terraform:
 
-Предварительно необходимо внести значения в <b> Project/infrastructure/backend.tf </b> и <b> Project/terraform.tfvars </b> <br>
+Предварительно необходимо внести значения в переменные окружения <br>
 
-[Project/terraform.tfvars](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/terraform.tvars) <br>
-[Project/infrastructure/backend.tf](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/Project/infrastructure/backend.tf) <br>
+[env](https://github.com/IvanChet-4/DevOps_D/blob/main/Terraform/env) <br>
 
-## 1.  Переходим в Project/setup_bucket и создаем бакет следующими командами
+## 1.  Скачиваем git проект и переходим в Project/setup_bucket и создаем бакет следующими командами
 
 ```
+git clone https://github.com/IvanChet-4/DevOps_D.git
+cd DevOps_D/Terraform/Project/setup_bucket/
 terraform init
 terraform plan
 terraform apply -auto-approve
