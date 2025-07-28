@@ -27,7 +27,7 @@ Server URL: 	http://89.169.190.80:30070
 
 ```
 sudo apt update
-sudo apt install openjdk-17-jdk
+sudo apt install openjdk-21-jdk
 
 При установке нескольких вариантов можно переключиться на нужную версию с помощью команды :
 sudo update-alternatives --config java
