@@ -39,11 +39,11 @@ sudo update-alternatives --config java
 
 ```
 Лучше устанавливать агента с эндпоинта /installFullAgent.html
-Cкачиваем buildAgentFull.zip с помощью wget нужную версию
+Cкачиваем нужную версию buildAgentFull.zip с помощью wget
 Распаковываем в заранее подготовленную директорию 
 Переходим в cd conf/
 Копируем шаблон конфига cp buildAgent.dist.properties buildAgent.properties 
-Меняем значение основных переменных nano buildAgent.properties 
+Меняем значение основных переменных nano buildAgent.properties (server url и имя агента)
 Переходим в директорию cd bin/
 И запускаем командой ./agent.sh start
 ```
