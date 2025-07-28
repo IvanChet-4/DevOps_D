@@ -1,3 +1,5 @@
+Команды для добавления переменных окружения:
+
 export TF_VAR_yandex_token="y..."
 export TF_VAR_cloud_id="b..."
 export TF_VAR_folder_id="b..."
