@@ -22,7 +22,18 @@ terraform plan
 terraform apply -auto-approve
 ```
 
-### Шаг 2 Kubespray
+### Шаг 2 Atlantis
+[readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/readme.md)
+
+Настраиваем Atlantis
+т.к. данный сервис работает с webhook-ами, то для постоянного контроля инфраструктуры необходим отдельный сервер. <br>
+
+Результат: <br>
+
+![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
+![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
+
+### Шаг 3 Kubespray
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/readme.md)
 
 Настраиваем kubespray и запускаем:
@@ -44,7 +55,9 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 
 ![kube/config и вывод команды](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-9.jpg)
 
-### Шаг 3 Deploy
+
+
+### Шаг 4 Deploy
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Deploy/readme.md)
 
 Устанавливаем в кластер приложения по манифестам и скриптам, добавленным на предыдущем шаге.
@@ -97,21 +110,10 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 ![node_exporter](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-7.jpg)
 ![node_exporter](https://github.com/IvanChet-4/DevOps_D/blob/main/images/deploy/1-8.jpg)
 
-### Шаг 4 Teamcity
+### Шаг 5 Teamcity
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Teamcity/readme.md)
 
 Настраиваем Teamcity. 
 Устанавливаем и настраиваем агента для Teamcity.
 
 ![Teamcity](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-10.jpg)
-
-### Шаг 5 Atlantis
-[readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Atlantis/readme.md)
-
-Настраиваем Atlantis
-т.к. данный сервис работает с webhook-ами, то для постоянного контроля инфраструктуры необходим отдельный сервер. <br>
-
-Результат: <br>
-
-![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
-![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
