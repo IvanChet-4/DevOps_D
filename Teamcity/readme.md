@@ -71,9 +71,9 @@ teamcity.agent.name   contains   LinuxAgent
 
 ```
 dockerhub.password 	  ******
-dockerhub.repository 	4ivan/test-nginx-app
+dockerhub.repository 	  4ivan/test-nginx-app
 dockerhub.username 	  4ivan 	
-tag_name 	            latest 
+tag_name 	          latest 
 ```
 
 
