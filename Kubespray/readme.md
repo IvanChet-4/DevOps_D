@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 ## 1. Настройки перед запуском:
 
-5. Копируем шаблон:
+1. Копируем шаблон:
 ```
 cp -rfp inventory/sample inventory/"mycluster"
 ```
@@ -30,12 +30,12 @@ cp -rfp inventory/sample inventory/"mycluster"
 [hosts.yaml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/hosts.yaml) <br>
 Указываем внешние ip. <br>
 
-6. Добавляем в <b> inventory/"mycluster"/group_vars/all/all.yml </b> :
+2. Добавляем в <b> inventory/"mycluster"/group_vars/all/all.yml </b> :
 ```
 ansible_user: user7
 ansible_ssh_private_key_file: ~/.ssh/id_ed25519
 ```
-7. При необходимости добавляем задач в <b> kubespray/roles/kubernetes/client/tasks/main.yaml </b>
+3. При необходимости добавляем задач в <b> kubespray/roles/kubernetes/client/tasks/main.yaml </b>
 
 [main.yml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/main.yml)
 
