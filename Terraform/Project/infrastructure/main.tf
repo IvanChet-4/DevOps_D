@@ -1,31 +1,31 @@
 resource "yandex_vpc_network" "default" {
-  name = "my-vpc"
+  name = "my-vpc-cluster-kube"
 }
 
 resource "yandex_vpc_subnet" "subnet1" {
-  name           = "subnet-1"
+  name           = "noda-1-monitoring"
   zone           = var.zone
   network_id     = yandex_vpc_network.default.id
   v4_cidr_blocks = ["192.168.10.0/24"]
 }
 
 resource "yandex_vpc_subnet" "subnet2" {
-  name           = "subnet-2"
+  name           = "noda-2-app"
   zone           = var.zone
   network_id     = yandex_vpc_network.default.id
   v4_cidr_blocks = ["192.168.20.0/24"]
 }
 
 resource "yandex_vpc_subnet" "subnet3" {
-  name           = "subnet-3"
+  name           = "noda-3-teamcity"
   zone           = var.zone2
   network_id     = yandex_vpc_network.default.id
   v4_cidr_blocks = ["192.168.30.0/24"]
 }
 
 locals {
-  instance_memory = [2, 2, 2]
-  boot_disk_sizes  = [10, 10, 10]
+  instance_memory = [4, 2, 4]
+  boot_disk_sizes  = [20, 10, 20]
 }
 
 resource "yandex_compute_instance" "public_instance" {
