@@ -32,6 +32,7 @@ terraform apply -auto-approve
 
 ![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
 ![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
+![Результат](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-6.jpg)
 
 ### Шаг 3 Kubespray
 [readme.md](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/readme.md)
