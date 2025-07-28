@@ -48,10 +48,10 @@ Cкачиваем нужную версию buildAgentFull.zip с помощью
 И запускаем командой ./agent.sh start
 ```
 
-5. Настраиваем проект:
+4. Настраиваем проект:
 ![Настройка проекта](https://github.com/IvanChet-4/DevOps_D/blob/main/images/teamcity/1-5.jpg)
 
-6. Добавляем Branch specification:
+5. Добавляем Branch specification:
 	
 ```
 refs/heads/*
