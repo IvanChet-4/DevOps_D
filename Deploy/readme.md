@@ -34,7 +34,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 helm upgrade prometheus prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml
 ```
 
-4. Чтобы grafana была доступна на 80 порту заходим на ноду с лэйблом мониторинга и добавляем правила:
+4. Чтобы grafana была доступна на 80 порту:
 
 ```
 sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
