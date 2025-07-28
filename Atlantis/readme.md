@@ -84,8 +84,14 @@ git pull origin my-new-branch-2
 ```
 
 <br>
-Оформляем Pull request и смотрим результат: <br>
+Оформляем Pull request, смотрим результат и в комментариях к PR указываем команду: <br>
+
+```
+atlantis apply
+```
+
 <br>
  
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-3.jpg)
 ![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-4.jpg)
+![Запуск Atlantis](https://github.com/IvanChet-4/DevOps_D/blob/main/images/atlantis/1-6.jpg)
