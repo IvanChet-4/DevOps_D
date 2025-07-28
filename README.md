@@ -37,6 +37,8 @@ ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root c
 <b> kubespray/roles/kubernetes/client/tasks/main.yaml </b>  <br>
 [main.yml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/main.yml)
 
+![Завершение процесса Kubespray](https://github.com/IvanChet-4/DevOps_D/blob/main/images/kubespray/1-6.jpg)
+
 После работы kubespray, файл <b> ~/.kube/config </b> находиться в домашней директории у настроенного пользователя. <br>
 Команда <b> kubectl get pods --all-namespaces </b> отрабатывает без ошибок.
 
