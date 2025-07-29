@@ -28,7 +28,7 @@ cp -rfp inventory/sample inventory/"mycluster"
 ```
 Далее необходимо внести значения в <b> inventory/"mycluster"/hosts.yaml </b> <br>
 [hosts.yaml](https://github.com/IvanChet-4/DevOps_D/blob/main/Kubespray/add_parameters/hosts.yaml) <br>
-Указываем внешние ip. <br>
+Указываем ip. <br>
 
 2. Добавляем в <b> inventory/"mycluster"/group_vars/all/all.yml </b> :
 ```
